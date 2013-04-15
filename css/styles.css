@@ -1,5 +1,10 @@
 body {
-  background: url(images/noise6.png) center top repeat;
+  background: url('../images/noise6.png') center top repeat;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #333;
 }
 
 h1 {
@@ -9,6 +14,7 @@ h1 {
   font-weight: 600;
   font-size: 42pt;
   line-height: 36px;
+  margin: 0;
   /* font-family: 'Roboto Condensed', serif; */
   /* font-family: 'Cabin Condensed', sans-serif; */
   /* font-family: 'Noto Serif', serif; */
@@ -21,25 +27,134 @@ h1 {
 .subtitle {
   color: #666;
   font-family: 'Cabin Condensed', serif;
-  font-size: 12pt;
+  font-size: 16px;
   font-weight: 600;
-  line-height: 28px;
+  line-height: 20px;
   text-transform: uppercase;
-  border-bottom: 1px solid #ccc;
-
-  /* padding: 0 0 5px 12px; */
+  margin-bottom: 10px;
+  /* padding: 0 0 0 2px; */
+  /* text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1); */
 }
 
+.subtitle i {
+  color: #444;
+}
 
 .pic {
   border: 5px solid white;
-  box-shadow: 3px 3px 7px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
   /* box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); */
+  box-shadow: 1px 1px 6px 1px rgba(0, 0, 0, 0.2);
   float: right;
   margin: 0 20px 0 0;
 }
 
 .container {
-  width: 800px;
   margin: 40px auto 60px;
+}
+
+.header {
+  /* padding-left: 10px; */
+  border-bottom: 1px solid #ccc;
+}
+
+.personal {
+   /* padding: 10px 0 0 10px; */
+   padding-top: 10px;
+}
+
+.mail, .phone {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.location i {
+  /* color: #DA1A16; */
+  /* color: #B32522; */
+}
+
+a {
+  color: #5E9188;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: #36534e;
+  text-decoration: underline;
+}
+
+h2 {
+  /* font-family: 'Cabin Condensed', serif; */
+  /* margin-bottom: 10px; */
+}
+
+#employment {
+  /* padding-left: 10px; */
+}
+
+#employment dl, #employment dd {
+  margin: 0;
+}
+
+#employment h2 {
+  font-size: 32px;
+  font-weight: bold;
+  font-weight: 600;
+  /* text-shadow: 2px 2px 0 rgb(220, 220, 220); */
+}
+
+#employment h3 {
+  position: relative;
+  font-weight: 400;
+  border-bottom: 1px solid #ccc;
+  line-height: 140%;
+  margin-bottom: 0px;
+}
+
+#employment h3 .title {
+  font-weight: 400;
+  color: #4c6d67;
+  font-size: 16px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  line-height: 30px;
+}
+
+.period {
+  display: block;
+  color: #777;
+  font-size: 14px;
+  margin: 3px 0 5px 0;
+}
+
+#skills dl {
+
+}
+
+#skills dl dt {
+  font-size: 20px;
+  font-weight: 400;
+  position: relative;
+}
+
+#skills dl dd {
+  margin: 5px 0 15px 0;
+  /* font-size: 14px; */
+  color: #4c6d67;
+  position: relative;
+}
+
+
+#skills dl [class^="icon-"]:before,
+#skills dl [class*=" icon-"]:before {
+  color: #ececec;
+  font-size: 48px;
+  /* line-height: 14px; */
+  /* width: 1em; */
+  position: absolute;
+  right: 0;
+  z-index: -1;
+  text-shadow: 1px 1px 0 #fff;
 }

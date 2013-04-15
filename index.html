@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <title>Raine Virta - Resume</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/fontello.css" rel="stylesheet" media="screen">
     <link href="css/bootstrap.css" rel="stylesheet" media="screen">
     <link href="css/styles.css" rel="stylesheet" media="screen" />
     <link href='http://fonts.googleapis.com/css?family=Arbutus+Slab|Cabin+Condensed:400,600|Noto+Serif:400,700|Roboto+Condensed:400,700|Oxygen|Open+Sans' rel='stylesheet' type='text/css'>
@@ -11,11 +12,94 @@
   <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
   <body>
     <div class="container">
-      <h1>
-        Raine Virta
-        <img class="pic" src="images/raine.jpg" />
-      </h1>
-      <h2 class="subtitle">Coder & Web Developer</h2>
-    </div>
+      <div class="header">
+        <h1>
+          Raine Virta
+          <img class="pic" src="images/raine.jpg" />
+        </h1>
+        <!-- <h2 class="subtitle"><i class="icon&#45;right&#45;dir"></i>Coder &#38; Web Developer</h2> -->
+        <h2 class="subtitle"><i class="icon-right-open"></i>Coder & Web Developer</h2>
+        <!-- <h2 class="subtitle">Coder &#38; Web Developer</h2> -->
+      </div> <!-- header -->
+
+      <div class="personal">
+        <span class="mail">
+          <i class="icon-mail-1"></i> <a href="mailto:raine.virta@gmail.com">raine.virta@gmail.com</a>
+        </span>
+        <span class="phone">
+          <i class="icon-phone-1"></i> +358 41 5241320
+        </span>
+        <span class="location">
+          <i class="icon-location"></i> Helsinki, Finland
+        </span>
+      </div>
+
+      <div class="row">
+        <div id="employment" class="span6">
+          <h2>Experience</h2>
+          <dl>
+            <dd class="clear"></dd>
+            <dd>
+              <h3>
+                Blaast
+                <span class="title">Software Engineer</span>
+              </h3>
+              <span class="period">March 2011 – August 2012</span>
+              <p>
+                Mobile app platform in the cloud. Developed apps and built
+                DevHub – a Rails-powered web frontend for 3rd-party devs,
+                pushing the up-to-date apps live into the platform. An
+                unparalleled learning opportunity having worked with some of
+                the smartest people I have ever met.
+              </p>
+              <h3>Nodeta Oy
+                <span class="title">Web Software Developer</span>
+              </h3>
+              <span class="period">April 2009 – March 2011</span>
+              <p>
+                I was part of the team working on
+                <a href="https://www.flowdock.com">Flowdock</a>, a collaboration
+                web app for technical teams. Mostly worked on the Rails
+                frontend and UI/UX. Also wrote and maintained acceptance tests for business
+                critical features such as the sign up flow.
+              </p>
+            </dd>
+          </dl>
+        </div> <!-- employment -->
+        <div id="skills" class="span6">
+          <h2>Skills</h2>
+          <dl>
+            <dt>
+              <i class="icon-code"></i>
+              Languages
+            </dt>
+            <dd>
+              JavaScript (NodeJS), CoffeeScript, Ruby, PHP, Python, Perl, Java</dd>
+
+            <dt>
+              <i class="icon-magic"></i>
+              Assorted Web Buzzwords
+            </dt>
+            <dd>
+              HTML, CSS, jQuery, Ajax, Ruby on Rails, Express.js, UI/UX dev,
+              Amazon AWS, Web app deployment and optimization, Acceptance
+              testing, API development
+            </dd>
+
+            <dt>
+              <i class="icon-database"></i>
+              Databases
+            </dt>
+            <dd>MongoDB, SQL, Redis</dd>
+
+            <dt>
+              <i class="icon-tools"></i>
+              Tools
+            </dt>
+            <dd>Mac OS X, Git, vim, Photoshop, Illustrator</dd>
+          </dl>
+        </div> <!-- skills -->
+      </div> <!-- row -->
+    </div> <!-- container -->
   </body>
 </html>
