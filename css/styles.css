@@ -62,7 +62,7 @@ body {
     width: 64px;
     border-radius: 64px;
     border: 0;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
   }
 }
 
@@ -118,10 +118,14 @@ a:focus {
   clear: both;
 }
 
+.row h2 {
+  border-bottom: 1px dotted #ccc;
+}
+
 .timeline h3 {
   position: relative;
   font-weight: 400;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #ddd;
   line-height: 140%;
   margin-bottom: 0px;
 }
