@@ -36,8 +36,7 @@ body {
   font-weight: 600;
   line-height: 20px;
   text-transform: uppercase;
-  margin-bottom: 10px;
-  /* text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1); */
+  margin: 10px 0 8px 0;
 }
 
 #header .subtitle i {
