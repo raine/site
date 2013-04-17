@@ -58,14 +58,31 @@ h1 {
   border-bottom: 1px solid #ccc;
 }
 
+.personal ul {
+  margin: 0 0 0 10px;
+  padding: 0 0 0 10px;
+  float: left;
+  border-left: 1px solid #ccc;
+}
+
+.personal ul:first-child {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+.personal ul li {
+  list-style-type: none;
+}
+
+.personal ul li:not(:last-child) {
+  list-style-type: none;
+  padding-bottom: 4px
+}
+
 .personal {
    /* padding: 10px 0 0 10px; */
    padding-top: 10px;
-}
-
-.mail, .phone {
-  display: block;
-  margin-bottom: 4px;
 }
 
 .location i {
@@ -73,9 +90,14 @@ h1 {
   /* color: #B32522; */
 }
 
+#social i {
+  margin-right: 2px;
+}
+
 a {
   color: #5E9188;
   text-decoration: none;
+  text-shadow: 1px 1px 0 #fff;
 }
 
 a:hover,
@@ -87,6 +109,10 @@ a:focus {
 h2 {
   /* font-family: 'Cabin Condensed', serif; */
   /* margin-bottom: 10px; */
+}
+
+.row {
+  clear: both;
 }
 
 #employment {
@@ -129,10 +155,6 @@ h2 {
   margin: 3px 0 5px 0;
 }
 
-#skills dl {
-
-}
-
 #skills dl dt {
   font-size: 20px;
   font-weight: 400;
@@ -151,8 +173,6 @@ h2 {
 #skills dl [class*=" icon-"]:before {
   color: #ececec;
   font-size: 48px;
-  /* line-height: 14px; */
-  /* width: 1em; */
   position: absolute;
   right: 0;
   z-index: -1;
