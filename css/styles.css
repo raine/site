@@ -8,7 +8,12 @@ body {
   color: #333;
 }
 
-h1 {
+#header {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+#header h1 {
   color: #222;
   text-shadow: 3px 3px 0 rgb(220, 220, 220);
   font-family: 'Cabin Condensed', serif;
@@ -25,7 +30,7 @@ h1 {
   /* margin: 0; */
 }
 
-.subtitle {
+#header .subtitle {
   color: #666;
   font-family: 'Cabin Condensed', serif;
   font-size: 16px;
@@ -36,11 +41,11 @@ h1 {
   /* text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1); */
 }
 
-.subtitle i {
+#header .subtitle i {
   color: #444;
 }
 
-.pic {
+#header .pic {
   border: 5px solid white;
   border-radius: 3px;
   box-shadow: 1px 1px 6px 1px rgba(0, 0, 0, 0.2);
@@ -49,13 +54,27 @@ h1 {
   margin: 0 0 0 0;
 }
 
+@media (max-width: 767px) {
+  #header h1 {
+    font-size: 36pt;
+  }
+
+  #header .pic {
+    height: 64px;
+    width: 64px;
+    border-radius: 64px;
+    border: 0;
+  }
+}
+
 .container {
   margin: 40px auto 60px;
 }
 
-.header {
-  border-bottom: 1px solid #ccc;
-  margin-bottom: 10px;
+@media (max-width: 767px) {
+  .container {
+    margin-top: 20px;
+  }
 }
 
 .personal ul {

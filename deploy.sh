@@ -6,5 +6,3 @@ rsync \
   --exclude '.git*' \
   --exclude 'deploy.sh' \
   -va $(pwd) ~/Dropbox/Public
-
-open ~/Dropbox/Public/$(basename `pwd`)
