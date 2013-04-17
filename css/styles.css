@@ -145,24 +145,22 @@ a:focus {
 
 .oneline-timeline h3 {
   font-size: 20px;
-  position: relative;
   font-weight: 400;
-  line-height: 140%;
-  margin: 0;
+  line-height: 22px;
+  margin-bottom: 0em;
 }
 
 .oneline-timeline .time-period:before {
-  content: "(";
+  /* content: "("; */
 }
 
 .oneline-timeline .time-period:after {
-  content: ")";
+  /* content: ")"; */
 }
 
 .oneline-timeline .time-period {
   color: #777;
-  font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 #skills dl dt {
