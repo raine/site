@@ -32,7 +32,6 @@ h1 {
   line-height: 20px;
   text-transform: uppercase;
   margin-bottom: 10px;
-  /* padding: 0 0 0 2px; */
   /* text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1); */
 }
 
@@ -54,8 +53,8 @@ h1 {
 }
 
 .header {
-  /* padding-left: 10px; */
   border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
 }
 
 .personal ul {
@@ -80,16 +79,6 @@ h1 {
   padding-bottom: 4px
 }
 
-.personal {
-   /* padding: 10px 0 0 10px; */
-   padding-top: 10px;
-}
-
-.location i {
-  /* color: #DA1A16; */
-  /* color: #B32522; */
-}
-
 #social i {
   margin-right: 2px;
 }
@@ -106,17 +95,8 @@ a:focus {
   text-decoration: underline;
 }
 
-h2 {
-  /* font-family: 'Cabin Condensed', serif; */
-  /* margin-bottom: 10px; */
-}
-
 .row {
   clear: both;
-}
-
-#employment {
-  /* padding-left: 10px; */
 }
 
 #employment dl, #employment dd {
@@ -127,7 +107,6 @@ h2 {
   font-size: 32px;
   font-weight: bold;
   font-weight: 600;
-  /* text-shadow: 2px 2px 0 rgb(220, 220, 220); */
 }
 
 #employment h3 {
@@ -138,7 +117,7 @@ h2 {
   margin-bottom: 0px;
 }
 
-#employment h3 .title {
+#employment h3 .job-title {
   font-weight: 400;
   color: #4c6d67;
   font-size: 16px;
@@ -167,7 +146,6 @@ h2 {
   color: #4c6d67;
   position: relative;
 }
-
 
 #skills dl [class^="icon-"]:before,
 #skills dl [class*=" icon-"]:before {
