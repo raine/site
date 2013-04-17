@@ -99,17 +99,7 @@ a:focus {
   clear: both;
 }
 
-#employment dl, #employment dd {
-  margin: 0;
-}
-
-#employment h2 {
-  font-size: 32px;
-  font-weight: bold;
-  font-weight: 600;
-}
-
-#employment h3 {
+.timeline h3 {
   position: relative;
   font-weight: 400;
   border-bottom: 1px solid #ccc;
@@ -117,7 +107,7 @@ a:focus {
   margin-bottom: 0px;
 }
 
-#employment h3 .job-title {
+.timeline h3 .job-title {
   font-weight: 400;
   color: #4c6d67;
   font-size: 16px;
@@ -127,7 +117,7 @@ a:focus {
   line-height: 30px;
 }
 
-.period {
+.time-period {
   display: block;
   color: #777;
   font-size: 14px;
