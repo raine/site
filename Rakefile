@@ -10,6 +10,7 @@ task :build do
   stasis = Stasis.new 'site/'
   stasis.options[:production] = true
   stasis.render
+  Dir.chdir pwd
 
   Dir.chdir "#{pwd}/site" do
 	mkdir_p "tmp"
