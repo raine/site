@@ -8,7 +8,7 @@ task :build do
   Dir.chdir "site" do
 	mkdir_p "tmp"
 
-	sh "stasis"
+	sh "ENV=production stasis"
 	sh "cat #{CSS_INPUT} > tmp/combined.css"
 	sh "java -jar #{YUI_COMPRESSOR} -v --type css --charset utf8 -o #{CSS_OUTPUT} tmp/combined.css"
 	sh "rm -rf public/css"
