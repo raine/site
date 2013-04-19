@@ -2,7 +2,7 @@ body {
   background: url('../images/noise6.png') center top repeat;
   font-size: 14px;
   font-weight: 400;
-  font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif;
+  font-family: 'Roboto Condensed', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   line-height: 20px;
   color: #333;
 }
@@ -15,7 +15,7 @@ body {
 #header h1 {
   color: #222;
   text-shadow: 3px 3px 0 rgb(220, 220, 220);
-  font-family: 'Cabin Condensed', serif;
+  font-family: 'Cabin Condensed', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 600;
   font-size: 42pt;
   line-height: 36px;
@@ -24,7 +24,7 @@ body {
 
 #header .subtitle {
   color: #666;
-  font-family: 'Cabin Condensed', serif;
+  font-family: 'Cabin Condensed', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-weight: 600;
   line-height: 20px;
