@@ -22,6 +22,7 @@ task :publish => [ :build ] do
   Dir.chdir "raneksi.github.io" do
 	sh "git add ."
 	sh "git commit -a -m 'deploying #{Time.now}'"
+	sh "git push"
   end
 end
 
