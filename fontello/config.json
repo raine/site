@@ -119,18 +119,6 @@
     },
     {
       "search": [
-        "move"
-      ],
-      "code": 61511,
-      "uid": "6605ee6441bf499ffa3c63d3c7409471",
-      "css": "move",
-      "orig_css": "move",
-      "orig_code": 61511,
-      "src": "fontawesome",
-      "from": 61511
-    },
-    {
-      "search": [
         "magic"
       ],
       "code": 61648,
