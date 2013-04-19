@@ -2,13 +2,18 @@ YUI_COMPRESSOR = File.join Dir.pwd, 'yuicompressor.jar'
 CSS_INPUT      = 'public/css/*'
 CSS_OUTPUT     = 'public/resume-min.css'
 
-p YUI_COMPRESSOR
+require 'stasis'
 
 task :build do
-  Dir.chdir "site" do
+  # Stasis changes the cwd as a side-effect
+  pwd = Dir.pwd
+  stasis = Stasis.new 'site/'
+  stasis.options[:production] = true
+  stasis.render
+
+  Dir.chdir "#{pwd}/site" do
 	mkdir_p "tmp"
 
-	sh "ENV=production stasis"
 	sh "cat #{CSS_INPUT} > tmp/combined.css"
 	sh "java -jar #{YUI_COMPRESSOR} -v --type css --charset utf8 -o #{CSS_OUTPUT} tmp/combined.css"
 	sh "rm -rf public/css"
