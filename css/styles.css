@@ -145,14 +145,6 @@ a:focus {
   margin-bottom: 0em;
 }
 
-.oneline-timeline .time-period:before {
-  /* content: "("; */
-}
-
-.oneline-timeline .time-period:after {
-  /* content: ")"; */
-}
-
 .oneline-timeline .time-period {
   color: #777;
   font-size: 14px;
@@ -166,7 +158,6 @@ a:focus {
 
 #skills dl dd {
   margin: 5px 0 15px 0;
-  /* font-size: 14px; */
   color: #4c6d67;
   position: relative;
 }
