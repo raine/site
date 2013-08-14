@@ -10,8 +10,14 @@
     <link href="css/fontello.css" rel="stylesheet" media="screen">
     <link href="css/bootstrap.css" rel="stylesheet" media="screen">
     <link href="css/styles.css" rel="stylesheet" media="screen" />
+    <link href="css/jquery.fancybox.css" rel="stylesheet" media="screen" />
+    <link href="css/jquery.fancybox-thumbs.css" rel="stylesheet" media="screen" />
 <% end %>
     <link href="http://fonts.googleapis.com/css?family=Cabin+Condensed:600|Roboto+Condensed:400,700" rel="stylesheet" type="text/css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript" src="js/jquery.fancybox-thumbs.js"></script>
+    <script type="text/javascript" src="js/resume.js"></script>
   </head>
 <% if not @production %>
   <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
@@ -139,9 +145,13 @@
         <div id="projects" class="span6">
           <h2>Projects</h2>
           <div class="major">
-            <a class="thumb">
+            <a class="fancybox thumb" href="images/memrise-button-1.png" data-fancybox-title="Promotional image for Chrome Store">
+              <img class="hidden" src="images/memrise-button-1.png" />
               <img src="images/memrise-button-thumb.png" />
             </a>
+            <div class="hidden">
+              <a class="fancybox" href="images/memrise-button-2.png" data-fancybox-title="Options page"></a>
+            </div>
 
             <h3>
               <a href="https://chrome.google.com/webstore/detail/memrise-button/mahhgdkliaknjffpmocpaglcoljnhodn">
