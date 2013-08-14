@@ -111,6 +111,7 @@ a:focus {
 }
 
 .row h2 {
+  font-weight: normal;
   border-bottom: 1px dotted #ccc;
 }
 
