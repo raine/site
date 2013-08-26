@@ -47,4 +47,17 @@ $(function() {
 			}
 		], fancyboxOpts);
 	});
+
+	$(document).click(function() {
+		var imgs = [
+			"images/devhub-thumb.png",
+			"images/devhub-thumb2.png",
+			"images/devhub-thumb3.png"
+		];
+
+		var src = imgs[Math.floor(Math.random()*imgs.length)];
+
+		$('#fancybox-devhub img').attr('src', src);
+	});
+
 });
