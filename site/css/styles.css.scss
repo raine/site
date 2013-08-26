@@ -213,10 +213,11 @@ $langcolor: #4c6d67;
 #projects .minor li:after { content: ","; }
 #projects .minor li:last-child:after { content: ""; }
 
-#projects .thumb {
+.thumb {
   border: 1px solid #ddd;
   display: block;
   padding: 4px;
+  margin-left: 10px;
   float: right;
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
   -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
@@ -230,10 +231,15 @@ $langcolor: #4c6d67;
   border-radius: 4px;
 }
 
-#projects .thumb:hover,
-#projects .thumb:focus {
+.thumb:hover,
+.thumb:focus {
   border-color: #0088cc;
   -webkit-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
   -moz-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
   box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
+}
+
+.fancybox-title {
+  font-weight: bold !important;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.6) !important;
 }
