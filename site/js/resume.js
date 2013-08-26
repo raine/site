@@ -1,6 +1,7 @@
 $(function() {
 	var fancyboxOpts = {
 		padding: 0,
+		closeBtn: false,
 		helpers: {
 			thumbs: {
 				width  : 75,
