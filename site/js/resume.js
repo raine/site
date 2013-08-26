@@ -47,4 +47,20 @@ $(function() {
 			}
 		], fancyboxOpts);
 	});
+
+	$(document).keypress(function(ev) {
+		if (ev.charCode === 32) {
+			var imgs = [
+				"images/devhub-thumb.png",
+				"images/devhub-thumb2.png",
+				"images/devhub-thumb3.png"
+			];
+
+			var src = imgs[Math.floor(Math.random()*imgs.length)];
+
+			$('#fancybox-devhub img').attr('src', src);
+
+			return false;
+		}
+	});
 });
