@@ -1,6 +1,15 @@
 YUI_COMPRESSOR = File.join Dir.pwd, 'yuicompressor.jar'
-CSS_INPUT      = 'public/css/*'
-CSS_OUTPUT     = 'public/resume-min.css'
+
+CSS_INPUT  = 'public/css/*'
+CSS_OUTPUT = 'public/resume-min.css'
+
+JS_FILES = %w(
+  jquery.fancybox.pack.js
+  jquery.fancybox-thumbs.js
+  resume.js
+).map! { |f| 'public/js/' + f }
+
+JS_OUTPUT = 'public/resume.min.js'
 
 require 'stasis'
 
@@ -17,7 +26,11 @@ task :build do
 
 	sh "cat #{CSS_INPUT} > tmp/combined.css"
 	sh "java -jar #{YUI_COMPRESSOR} -v --type css --charset utf8 -o #{CSS_OUTPUT} tmp/combined.css"
-	sh "rm -rf public/css"
+
+	sh "cat #{JS_FILES.join ' '} > tmp/combined.js"
+	sh "java -jar #{YUI_COMPRESSOR} -v --type js --charset utf8 -o #{JS_OUTPUT} tmp/combined.js"
+
+	sh "rm -rf public/css public/js"
 	sh "rm -rf tmp"
   end
 end
