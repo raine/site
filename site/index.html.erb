@@ -14,14 +14,6 @@
     <link href="css/jquery.fancybox-thumbs.css" rel="stylesheet" media="screen" />
 <% end %>
     <link href="http://fonts.googleapis.com/css?family=Cabin+Condensed:600|Roboto+Condensed:400,700" rel="stylesheet" type="text/css">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-<% if @production %>
-    <script type="text/javascript" src="resume.min.js"></script>
-<% else %>
-    <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
-    <script type="text/javascript" src="js/jquery.fancybox-thumbs.js"></script>
-    <script type="text/javascript" src="js/resume.js"></script>
-<% end %>
   </head>
 <% if not @production %>
   <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
@@ -199,6 +191,15 @@
         </div> <!-- projects -->
       </div> <!-- row -->
     </div> <!-- container -->
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<% if @production %>
+    <script type="text/javascript" src="resume.min.js"></script>
+<% else %>
+    <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript" src="js/jquery.fancybox-thumbs.js"></script>
+    <script type="text/javascript" src="js/resume.js"></script>
+<% end %>
 <% if @production %>
     <script type="text/javascript">
       var _gaq = _gaq || [];
