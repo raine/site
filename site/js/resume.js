@@ -44,7 +44,7 @@ $(function() {
 			},
 			{
 				href  : 'images/memrise-button2.png',
-				title : 'Options page'
+				title : 'Options page powered by Backbone.js'
 			}
 		], fancyboxOpts);
 	});
