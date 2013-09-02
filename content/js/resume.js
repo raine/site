@@ -49,7 +49,9 @@ $(function() {
 		], fancyboxOpts);
 	});
 
-	$('#avatar').load(onImageLoad);
+	$('#avatar').one('load', onImageLoad).each(function() {
+		if (this.complete) $(this).load();
+	});
 });
 
 function onImageLoad() {
