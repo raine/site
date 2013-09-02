@@ -1,7 +1,7 @@
 YUI_COMPRESSOR = File.join Dir.pwd, 'yuicompressor.jar'
 
-CSS_INPUT  = 'public/css/*'
-CSS_OUTPUT = 'public/resume.min.css'
+CSS_INPUT  = 'output/css/*'
+CSS_OUTPUT = 'output/resume.min.css'
 
 JS_FILES = %w(
   jquery.fancybox.pack.js
@@ -10,32 +10,19 @@ JS_FILES = %w(
   easing.js
   px.js
   resume.js
-).map! { |f| 'public/js/' + f }
+).map! { |f| 'output/js/' + f }
 
-JS_OUTPUT = 'public/resume.min.js'
-
-require 'stasis'
+JS_OUTPUT = 'output/resume.min.js'
 
 task :build do
-  # Stasis changes the cwd as a side-effect
-  pwd = Dir.pwd
-  stasis = Stasis.new 'site/'
-  stasis.options[:production] = true
-  stasis.render
-  Dir.chdir pwd
-
-  Dir.chdir "#{pwd}/site" do
-	mkdir_p "tmp"
+  sh "./nanoc_build_prod.sh"
 
 	sh "cat #{CSS_INPUT} > tmp/combined.css"
-	sh "java -jar #{YUI_COMPRESSOR} -v --type css --charset utf8 -o #{CSS_OUTPUT} tmp/combined.css"
-
 	sh "cat #{JS_FILES.join ' '} > tmp/combined.js"
-	sh "java -jar #{YUI_COMPRESSOR} -v --type js --charset utf8 -o #{JS_OUTPUT} tmp/combined.js"
 
-	sh "rm -rf public/css public/js"
-	sh "rm -rf tmp"
-  end
+	sh "java -jar #{YUI_COMPRESSOR} --type css --charset utf8 -o #{CSS_OUTPUT} tmp/combined.css"
+	sh "java -jar #{YUI_COMPRESSOR} --type js --charset utf8 -o #{JS_OUTPUT} tmp/combined.js"
+	sh "rm -rf output/{css,js}"
 end
 
 task :publish => [ :build ] do
