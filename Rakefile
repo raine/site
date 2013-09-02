@@ -1,7 +1,7 @@
 YUI_JAR = File.join Dir.pwd, 'yuicompressor.jar'
 
 CSS_INPUT  = 'output/css/*'
-CSS_OUTPUT = 'output/js/resume.min.css'
+CSS_OUTPUT = 'output/css/resume.min.css'
 
 JS_FILES = %w(
   jquery.fancybox.pack.js
