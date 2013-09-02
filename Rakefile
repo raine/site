@@ -6,6 +6,7 @@ CSS_OUTPUT = 'output/css/resume.min.css'
 JS_FILES = %w(
   jquery.fancybox.pack.js
   jquery.fancybox-thumbs.js
+  ahpi.imgload.js
   underscore.js
   easing.js
   px.js

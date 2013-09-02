@@ -49,7 +49,7 @@ $(function() {
 		], fancyboxOpts);
 	});
 
-	$('#avatar').load(onImageLoad);
+	$('#avatar').bind('load', onImageLoad);
 });
 
 function onImageLoad() {
