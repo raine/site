@@ -62,12 +62,31 @@ function onImageLoad() {
 
 		var effects = [
 			function() {
+				// var banned     = [ 'easeInOutElastic' ];
+				// var easings    = _.without(_.keys(Easing), banned);
+				// var easingName = pickRandom(_.keys(Easing));
+				// console.log(easingName);
 				opts = _.defaults(opts, {
-					blockSize  : pickRandom(8, 16),
+					blockSize  : 16,
+					duration   : pickRandom(1000, 2000, 3000),
+					randomize  : true,
+					reverseDir : pickRandom(true, false),
+					easing     : Easing.easeOutBounce,
+					delay      : pickRandom(20, 100)
+				});
+
+				return function(canvas, cb) {
+					Px.animateTiles(canvas, opts, cb);
+				};
+			},
+
+			function() {
+				opts = _.defaults(opts, {
+					blockSize  : 8,
 					duration   : 500,
 					randomize  : pickRandom(true, false),
 					reverseDir : pickRandom(true, false),
-					easing     : Easing.easeOutQuad,
+					easing     : pickRandom(Easing.easeOutQuad, Easing.easeOutBounce),
 					delay      : 5
 				});
 
@@ -95,38 +114,41 @@ function onImageLoad() {
 
 		var reverseEffects = [
 			function() {
-			var easingName = pickRandom(_.keys(Easing));
-			var dur;
-			if (opts.blockSize === 8) {
-				dur = _.random(500, 2000);
-			} else {
-				dur = _.random(3000, 5000);
-			}
+				return function(canvas, cb) {
+					var easingName = pickRandom('easeInBounce', 'easeOutBounce', 'easeInOutBack');
+					// console.log(easingName);
+					Px.animate(canvas, {
+						easing   : Easing[easingName],
+						duration : 2000,
+						start    : opts.blockSize,
+						end      : 1
+					}, cb);
+				};
+			},
 
-			opts = _.defaults(opts, {
-				duration   : dur,
-				randomize  : pickRandom(true, false),
-				reverseDir : pickRandom(true, false),
-				easing     : Easing[easingName],
-				delay      : 5
-			});
-
-			return function(canvas, cb) {
-				Px.animateTiles(canvas, opts, cb);
-			};
-		},
-
-		function() {
-			return function(canvas, cb) {
+			function() {
 				var easingName = pickRandom(_.keys(Easing));
-				Px.animate(canvas, {
-					easing   : Easing[easingName],
-					duration : _.random(1000, 3000),
-					start    : opts.blockSize,
-					end      : 1
-				}, cb);
-			};
-		}
+				var dur;
+				if (opts.blockSize === 8) {
+					dur = _.random(750, 2000);
+				} else if (opts.blockSize === 16) {
+					dur = _.random(1000, 2000);
+				} else {
+					dur = _.random(3000, 5000);
+				}
+
+				opts = _.defaults(opts, {
+					duration   : dur,
+					randomize  : pickRandom(true, false),
+					reverseDir : pickRandom(true, false),
+					easing     : Easing['easeInBounce'],
+					delay      : 5
+				});
+
+				return function(canvas, cb) {
+					Px.animateTiles(canvas, opts, cb);
+				};
+			},
 		];
 
 		var effect;
