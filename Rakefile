@@ -1,7 +1,7 @@
 YUI_JAR = File.join Dir.pwd, 'yuicompressor.jar'
 
 CSS_INPUT  = 'output/css/*'
-CSS_OUTPUT = 'output/resume.min.css'
+CSS_OUTPUT = 'output/js/resume.min.css'
 
 JS_FILES = %w(
   jquery.fancybox.pack.js
@@ -12,7 +12,7 @@ JS_FILES = %w(
   resume.js
 ).map! { |f| 'output/js/' + f }
 
-JS_OUTPUT = 'output/resume.min.js'
+JS_OUTPUT = 'output/js/resume.min.js'
 
 task :build do
   sh "./nanoc_build_prod.sh"
@@ -22,7 +22,6 @@ task :build do
 
 	sh "java -jar #{YUI_JAR} --type css --charset utf8 -o #{CSS_OUTPUT} tmp/combined.css"
 	sh "java -jar #{YUI_JAR} --type js --charset utf8 -o #{JS_OUTPUT} tmp/combined.js"
-	sh "rm -rf output/{css,js}"
 end
 
 task :publish => [ :build ] do
