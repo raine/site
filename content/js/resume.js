@@ -62,35 +62,35 @@ function onImageLoad() {
 
 		var effects = [
 			function() {
-			opts = _.defaults(opts, {
-				blockSize  : pickRandom(8, 16),
-				duration   : 500,
-				randomize  : pickRandom(true, false),
-				reverseDir : pickRandom(true, false),
-				easing     : Easing.easeOutQuad,
-				delay      : 5
-			});
+				opts = _.defaults(opts, {
+					blockSize  : pickRandom(8, 16),
+					duration   : 500,
+					randomize  : pickRandom(true, false),
+					reverseDir : pickRandom(true, false),
+					easing     : Easing.easeOutQuad,
+					delay      : 5
+				});
 
-			return function(canvas, cb) {
-				Px.animateTiles(canvas, opts, cb);
-			};
-		},
+				return function(canvas, cb) {
+					Px.animateTiles(canvas, opts, cb);
+				};
+			},
 
-		function() {
-			var easingName = pickRandom(_.keys(Easing));
-			opts = _.defaults(opts, {
-				blockSize  : 32,
-				duration   : _.random(3000, 5000),
-				randomize  : pickRandom(true, false),
-				reverseDir : pickRandom(true, false),
-				easing     : Easing[easingName],
-				delay      : 20
-			});
+			function() {
+				var easingName = pickRandom(_.keys(Easing));
+				opts = _.defaults(opts, {
+					blockSize  : 32,
+					duration   : _.random(3000, 5000),
+					randomize  : pickRandom(true, false),
+					reverseDir : pickRandom(true, false),
+					easing     : Easing[easingName],
+					delay      : 20
+				});
 
-			return function(canvas, cb) {
-				Px.animateTiles(canvas, opts, cb);
-			};
-		}
+				return function(canvas, cb) {
+					Px.animateTiles(canvas, opts, cb);
+				};
+			}
 		];
 
 		var reverseEffects = [
