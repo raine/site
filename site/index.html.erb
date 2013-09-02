@@ -16,14 +16,15 @@
     <link href="http://fonts.googleapis.com/css?family=Cabin+Condensed:600|Roboto+Condensed:400,700" rel="stylesheet" type="text/css">
   </head>
 <% if not @production %>
-  <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 <% end %>
   <body>
     <div class="container">
       <div id="header">
         <h1>
           Raine Virta
-          <img class="pic" src="images/raine.jpg" />
+          <div id="avatar-wrap">
+            <img id="avatar" class="pic" src="images/raine.jpg" />
+          </div>
         </h1>
         <h2 class="subtitle"><i class="icon-right-open"></i>Coder & Web Developer</h2>
       </div> <!-- header -->
@@ -199,6 +200,7 @@
     <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
     <script type="text/javascript" src="js/jquery.fancybox-thumbs.js"></script>
     <script type="text/javascript" src="js/underscore.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
     <script type="text/javascript" src="js/px.js"></script>
     <script type="text/javascript" src="js/resume.js"></script>
 <% end %>

@@ -7,6 +7,7 @@ JS_FILES = %w(
   jquery.fancybox.pack.js
   jquery.fancybox-thumbs.js
   underscore.js
+  easing.js
   px.js
   resume.js
 ).map! { |f| 'public/js/' + f }
