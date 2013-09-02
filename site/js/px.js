@@ -7,8 +7,8 @@
     var vendors = ['ms', 'moz', 'webkit', 'o'];
     for(var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
         window.requestAnimationFrame = window[vendors[x]+'RequestAnimationFrame'];
-        window.cancelAnimationFrame = window[vendors[x]+'CancelAnimationFrame']
-                                   || window[vendors[x]+'CancelRequestAnimationFrame'];
+        window.cancelAnimationFrame =
+			window[vendors[x]+'CancelAnimationFrame'] || window[vendors[x]+'CancelRequestAnimationFrame'];
     }
 
     if (!window.requestAnimationFrame)
@@ -239,7 +239,7 @@ var Px = (function() {
 			blockSize = Math.max(opts.start, opts.end);
 
 			var imgDarr = breakCanvasToTiles(canvas, blockSize);
-			if (opts.reverseDir) imgDarr.reverse()
+			if (opts.reverseDir) imgDarr.reverse();
 
 			// The whole canvas needs to be pixelated at `opts.start` block size
 			if (opts.start > opts.end) {
