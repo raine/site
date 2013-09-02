@@ -1,1 +1,1 @@
-let g:ctrlp_custom_ignore = 'output$\|public$\|raneksi.github.io$\|' . g:ctrlp_custom_ignore
+let g:ctrlp_custom_ignore = 'output$\|tmp\|raneksi.github.io$\|' . g:ctrlp_custom_ignore
