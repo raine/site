@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <title>Raine Virta</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-<% if @production %>
+<% if @config[:env] == "production" %>
     <link href="resume.min.css" rel="stylesheet" media="screen">
 <% else %>
     <link href="css/fontello.css" rel="stylesheet" media="screen">
@@ -192,7 +192,7 @@
     </div> <!-- container -->
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-<% if @production %>
+<% if @config[:env] == "production" %>
     <script type="text/javascript" src="resume.min.js"></script>
 <% else %>
     <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
@@ -202,7 +202,7 @@
     <script type="text/javascript" src="js/px.js"></script>
     <script type="text/javascript" src="js/resume.js"></script>
 <% end %>
-<% if @production %>
+<% if @config[:env] == "production" %>
     <script type="text/javascript">
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-30721226-2']);
