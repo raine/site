@@ -1,4 +1,4 @@
-YUI_COMPRESSOR = File.join Dir.pwd, 'yuicompressor.jar'
+YUI_JAR = File.join Dir.pwd, 'yuicompressor.jar'
 
 CSS_INPUT  = 'output/css/*'
 CSS_OUTPUT = 'output/resume.min.css'
@@ -20,8 +20,8 @@ task :build do
 	sh "cat #{CSS_INPUT} > tmp/combined.css"
 	sh "cat #{JS_FILES.join ' '} > tmp/combined.js"
 
-	sh "java -jar #{YUI_COMPRESSOR} --type css --charset utf8 -o #{CSS_OUTPUT} tmp/combined.css"
-	sh "java -jar #{YUI_COMPRESSOR} --type js --charset utf8 -o #{JS_OUTPUT} tmp/combined.js"
+	sh "java -jar #{YUI_JAR} --type css --charset utf8 -o #{CSS_OUTPUT} tmp/combined.css"
+	sh "java -jar #{YUI_JAR} --type js --charset utf8 -o #{JS_OUTPUT} tmp/combined.js"
 	sh "rm -rf output/{css,js}"
 end
 
