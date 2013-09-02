@@ -1,4 +1,6 @@
 .DS_Store
 public/
-raneksi.github.io
+raneksi.github.io/
 .sass-cache
+output/
+tmp/
