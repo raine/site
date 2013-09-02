@@ -26,12 +26,23 @@ task :build do
 end
 
 task :publish => [ :build ] do
-  sh "cp -R site/public/* raneksi.github.io"
+  # sh "cp -R site/public/* raneksi.github.io"
 
-  Dir.chdir "raneksi.github.io" do
-    sh "git add ."
-    sh "git commit -a -m 'deploying #{Time.now}'"
-    sh "git push"
+  # Dir.chdir "raneksi.github.io" do
+  #   sh "git add ."
+  #   sh "git commit -a -m 'deploying #{Time.now}'"
+  #   sh "git push"
+  # end
+end
+
+task :deploy => [ :build ] do
+  name = ARGV.last
+  task name.to_sym do; end
+
+  if ARGV.length > 1 and name == 'dropbox'
+    deploy_to_dropbox
+  else
+    deploy_to_github
   end
 end
 
@@ -39,4 +50,16 @@ task :init_github_pages do
   sh "git clone --branch master --single-branch git@github.com:raneksi/raneksi.github.com.git raneksi.github.io"
 end
 
+task :deploy_to_dropbox do
+  deploy_to_dropbox
+end
+
 task :default => 'build'
+
+def deploy_to_dropbox
+  sh "./assets/deploy.sh resume"
+end
+
+def deploy_to_github
+  p 'TODO'
+end
