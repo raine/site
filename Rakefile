@@ -70,7 +70,7 @@ def deploy_to_github
     sh "rm -r *"
     sh "cp -R ../build/* ."
     sh "git add -A"
-    sh "git commit -m 'deploying #{Time.now}'"
+    sh "git commit -m 'deploying #{Time.now}'" do |ok, res|; end
     sh "git push"
   end
 end
