@@ -1,7 +1,9 @@
+BUILD_DIR = 'build'
+
 YUI_JAR = File.join Dir.pwd, 'yuicompressor.jar'
 
-CSS_INPUT  = 'output/css/*'
-CSS_OUTPUT = 'output/css/resume.min.css'
+CSS_INPUT  = "#{BUILD_DIR}/css/*"
+CSS_OUTPUT = "#{BUILD_DIR}/css/resume.min.css"
 
 JS_FILES = %w(
   jquery.fancybox.pack.js
@@ -10,12 +12,19 @@ JS_FILES = %w(
   easing.js
   px.js
   resume.js
-).map! { |f| 'output/js/' + f }
+).map! { |f| "#{BUILD_DIR}/js/" + f }
 
-JS_OUTPUT = 'output/js/resume.min.js'
+JS_OUTPUT = "#{BUILD_DIR}/js/resume.min.js"
 
 task :build do
-  sh "./nanoc_build_prod.sh"
+  require 'nanoc'
+  require 'nanoc/cli'
+
+  site = ::Nanoc::Site.new('.')
+  site.config[:output_dir] = 'build'
+  site.config[:env] = 'production'
+  site.compile
+  ::Nanoc::Extra::Pruner.new(site, site.config[:prune]).run
 
 	sh "cat #{CSS_INPUT} > tmp/combined.css"
 	sh "cat #{JS_FILES.join ' '} > tmp/combined.js"

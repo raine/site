@@ -14,7 +14,7 @@ rsync \
   --exclude $(basename $0) \
   --exclude '.git*' \
   --exclude 'node_modules/' \
-  -va output/ ~/Dropbox/Public/$TARGET
+  -va build/ ~/Dropbox/Public/$TARGET
 
 FILE_TO_LINK="index.html"
 DROPBOX_ID=1103994
