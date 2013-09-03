@@ -11,7 +11,8 @@ JS_FILES = %w(
   underscore.js
   easing.js
   px.js
-  resume.js
+  efu.js
+  fancybox.js
 ).map! { |f| "#{BUILD_DIR}/js/" + f }
 
 JS_OUTPUT = "#{BUILD_DIR}/js/resume.min.js"
