@@ -34,9 +34,6 @@ task :build do
 	sh "java -jar #{YUI_JAR} --type js --charset utf8 -o #{JS_OUTPUT} tmp/combined.js"
 end
 
-task :publish => [ :build ] do
-end
-
 task :deploy => [ :build ] do
   name = ARGV.last
   task name.to_sym do; end
