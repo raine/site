@@ -4,9 +4,9 @@ site
 ### Tools and Libraries Used
 
 * [nanoc](http://nanoc.ws), a static site generator
-* [Fontello](http://fontello.com), icon fonts generator
+* [Fontello](http://fontello.com), an icon fonts generator
 * [Bootstrap](http://getbootstrap.com) for layout
-* [Fancybox](http://fancyapps.com/fancybox/), jQuery lightbox plugin
+* [Fancybox](http://fancyapps.com/fancybox/), a jQuery lightbox plugin
 
 ### Points of Interest
 
