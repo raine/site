@@ -109,8 +109,8 @@ function onImageLoad() {
 
 	var convertImageToCanvas = function(image) {
 		var canvas = document.createElement('canvas');
-		canvas.width  = image.width;
-		canvas.height = image.height;
+		canvas.width  = 128;
+		canvas.height = 128;
 		canvas.getContext('2d').drawImage(image, 0, 0);
 		return canvas;
 	};
