@@ -1,7 +1,7 @@
 site
 ====
 
-[![](https://raw.github.com/raneksi/raneksi.github.com/master/screenshot.png)](http://raneksi.github.io)
+[![](https://raw.github.com/raneksi/site/master/assets/screenshot.png)](http://raneksi.github.io)
 
 ### Tools and Libraries Used
 
