@@ -4,15 +4,15 @@
     <meta charset="utf-8" />
     <title>Raine Virta</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-<% if @config[:env] == "production" %>
+<% if @config[:env] == "production" -%>
     <link href="css/resume.min.css" rel="stylesheet" media="screen">
-<% else %>
+<% else -%>
     <link href="css/fontello.css" rel="stylesheet" media="screen">
     <link href="css/bootstrap.css" rel="stylesheet" media="screen">
     <link href="css/styles.css" rel="stylesheet" media="screen" />
     <link href="css/jquery-fancybox.css" rel="stylesheet" media="screen" />
     <link href="css/jquery-fancybox-thumbs.css" rel="stylesheet" media="screen" />
-<% end %>
+<% end -%>
     <link href="http://fonts.googleapis.com/css?family=Cabin+Condensed:600|Roboto+Condensed:400,700" rel="stylesheet" type="text/css">
   </head>
   <body>
@@ -192,9 +192,9 @@
     </div> <!-- container -->
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-<% if @config[:env] == "production" %>
+<% if @config[:env] == "production" -%>
     <script type="text/javascript" src="js/resume.min.js"></script>
-<% else %>
+<% else -%>
     <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
     <script type="text/javascript" src="js/jquery.fancybox-thumbs.js"></script>
     <script type="text/javascript" src="js/underscore.js"></script>
@@ -202,8 +202,8 @@
     <script type="text/javascript" src="js/px.js"></script>
     <script type="text/javascript" src="js/efu.js"></script>
     <script type="text/javascript" src="js/fancybox.js"></script>
-<% end %>
-<% if @config[:env] == "production" %>
+<% end -%>
+<% if @config[:env] == "production" -%>
     <script type="text/javascript">
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-30721226-2']);
@@ -215,6 +215,6 @@
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
     </script>
-<% end %>
+<% end -%>
   </body>
 </html>
