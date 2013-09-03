@@ -118,7 +118,8 @@ function onImageLoad() {
 	var canvas   = convertImageToCanvas(this);
 	var ctx      = canvas.getContext('2d');
 	var imgDcopy = ctx.getImageData(0, 0, canvas.width, canvas.height);
-	$(this).replaceWith(canvas);
+
+	$(this).parent().append(canvas);
 
 	var restore = function() {
 		ctx.putImageData(imgDcopy, 0, 0);
