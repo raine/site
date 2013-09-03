@@ -1,3 +1,29 @@
+(function() {
+	var hidden, visibilityChange;
+	if (typeof document.hidden !== 'undefined') { // Opera 12.10 and Firefox 18 and later support
+		hidden = 'hidden';
+		visibilityChange = 'visibilitychange';
+	} else if (typeof document.mozHidden !== 'undefined') {
+		hidden = 'mozHidden';
+		visibilityChange = 'mozvisibilitychange';
+	} else if (typeof document.msHidden !== 'undefined') {
+		hidden = 'msHidden';
+		visibilityChange = 'msvisibilitychange';
+	} else if (typeof document.webkitHidden !== 'undefined') {
+		hidden = 'webkitHidden';
+		visibilityChange = 'webkitvisibilitychange';
+	}
+
+	function handleVisibilityChange() {
+		$(document).trigger('visibility', document[hidden]);
+	}
+
+	if (typeof document.addEventListener !== 'undefined' &&
+		typeof hidden !== 'undefined') {
+		document.addEventListener(visibilityChange, handleVisibilityChange, false);
+	}
+}());
+
 function onImageLoad() {
 	var pickRandom = function() {
 		return _.first(_.shuffle(_.flatten(arguments)));
@@ -125,8 +151,26 @@ function onImageLoad() {
 		ctx.putImageData(imgDcopy, 0, 0);
 	};
 
+	var START_DELAY   = 5000;
+	var REVERSE_DELAY = _.random(2500, 5000);
+	var NEXT_DELAY    = _.random(4000, 7000);
+	var pageHidden;
+
+	$(document).on('visibility', function(ev, hidden) {
+		pageHidden = hidden;
+	});
+
 	var effectLoop = function() {
 		(function doEffect() {
+			var again = function() {
+				setTimeout(doEffect, NEXT_DELAY);
+			};
+
+			if ($(canvas).is(':hidden') || pageHidden) {
+				console.log('canvas hidden no effect');
+				return again();
+			}
+
 			var effect = makeRandomEffect();
 			var cb = function() {
 				setTimeout(function() {
@@ -136,22 +180,20 @@ function onImageLoad() {
 					});
 
 					restore();
-					efu.fn(canvas, function() {
-						setTimeout(doEffect, _.random(4000, 7000));
-					});
-				}, _.random(2500, 5000));
+					efu.fn(canvas, again);
+				}, REVERSE_DELAY);
 			};
 
 			effect.fn(canvas, cb);
 		})();
 	};
 
-	setTimeout(effectLoop, 5000);
+	setTimeout(effectLoop, START_DELAY);
 }
 
 // Ensures that load is fired on the image only once
 var domReady = function() {
-	$('#avatar').one('load', onImageLoad).each(function() {
+	$('#avatar-wrap .pic').one('load', onImageLoad).each(function() {
 		if (this.complete) $(this).load();
 	});
 };
