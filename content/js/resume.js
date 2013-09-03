@@ -180,8 +180,8 @@ function onImageLoad() {
 		ctx.putImageData(imgDcopy, 0, 0);
 	};
 
-	(function() {
-		var doEffect = function() {
+	var effectLoop = function() {
+		(function doEffect() {
 			var effect = makeRandomEffect();
 			var cb = function() {
 				setTimeout(function() {
@@ -198,8 +198,8 @@ function onImageLoad() {
 			};
 
 			effect.fn(canvas, cb);
-		};
+		})();
+	};
 
-		doEffect();
-	})();
+	setTimeout(effectLoop, 5000);
 }
