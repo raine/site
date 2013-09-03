@@ -35,13 +35,6 @@ task :build do
 end
 
 task :publish => [ :build ] do
-  # sh "cp -R site/public/* raneksi.github.io"
-
-  # Dir.chdir "raneksi.github.io" do
-  #   sh "git add ."
-  #   sh "git commit -a -m 'deploying #{Time.now}'"
-  #   sh "git push"
-  # end
 end
 
 task :deploy => [ :build ] do
@@ -63,6 +56,10 @@ task :deploy_to_dropbox do
   deploy_to_dropbox
 end
 
+task :deploy_to_github do
+  deploy_to_github
+end
+
 task :default => 'build'
 
 def deploy_to_dropbox
@@ -70,5 +67,12 @@ def deploy_to_dropbox
 end
 
 def deploy_to_github
-  p 'TODO'
+  Dir.chdir "raneksi.github.io" do
+    sh "git reset --hard"
+    sh "git clean -fd"
+    sh "rm -r *"
+    sh "cp -R ../build/* ."
+    sh "git add -A"
+    sh "git commit -m 'deploying #{Time.now}'"
+  end
 end
