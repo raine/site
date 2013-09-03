@@ -19,7 +19,6 @@ body {
   font-size: 42pt;
   line-height: 36px;
   margin: 0;
-  display: inline-block;
 }
 
 #header .subtitle {
@@ -29,7 +28,7 @@ body {
   font-weight: 600;
   line-height: 20px;
   text-transform: uppercase;
-  margin: 5px 0 8px 0;
+  margin: 10px 0 8px 0;
 }
 
 #header .subtitle i {
@@ -51,7 +50,15 @@ body {
     font-size: 36pt;
   }
 
-  #header .pic {
+  #avatar-wrap {
+    height: 64px;
+    width: 64px;
+    border: 0;
+    float: right;
+    box-shadow: none;
+  }
+
+  #avatar {
     height: 64px;
     width: 64px;
     border-radius: 64px;
