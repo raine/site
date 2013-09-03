@@ -27,11 +27,11 @@ task :build do
   site.compile
   ::Nanoc::Extra::Pruner.new(site, site.config[:prune]).run
 
-	sh "cat #{CSS_INPUT} > tmp/combined.css"
-	sh "cat #{JS_FILES.join ' '} > tmp/combined.js"
+  sh "cat #{CSS_INPUT} > tmp/combined.css"
+  sh "cat #{JS_FILES.join ' '} > tmp/combined.js"
 
-	sh "java -jar #{YUI_JAR} --type css --charset utf8 -o #{CSS_OUTPUT} tmp/combined.css"
-	sh "java -jar #{YUI_JAR} --type js --charset utf8 -o #{JS_OUTPUT} tmp/combined.js"
+  sh "java -jar #{YUI_JAR} --type css --charset utf8 -o #{CSS_OUTPUT} tmp/combined.css"
+  sh "java -jar #{YUI_JAR} --type js --charset utf8 -o #{JS_OUTPUT} tmp/combined.js"
 end
 
 task :deploy => [ :build ] do
