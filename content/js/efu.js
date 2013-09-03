@@ -113,7 +113,7 @@ function onImageLoad() {
 					duration   : dur,
 					randomize  : pickRandom(true, false),
 					reverseDir : pickRandom(true, false),
-					easing     : Easing['easeInBounce'],
+					easing     : Easing.easeInBounce,
 					delay      : 5
 				});
 
