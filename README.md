@@ -1,6 +1,8 @@
 site
 ====
 
+[![](https://raw.github.com/raneksi/raneksi.github.com/master/screenshot.png)](http://raneksi.github.io)
+
 ### Tools and Libraries Used
 
 * [nanoc](http://nanoc.ws), a static site generator
