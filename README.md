@@ -1,0 +1,13 @@
+site
+====
+
+### Tools and Libraries Used
+
+* [nanoc](http://nanoc.ws), a static site generator
+* [Fontello](http://fontello.com), icon fonts generator
+* [Bootstrap](http://getbootstrap.com) for layout
+* [Fancybox](http://fancyapps.com/fancybox/), jQuery lightbox plugin
+
+### Points of Interest
+
+* [Rakefile](https://github.com/raneksi/site/blob/master/Rakefile), deployment to GitHub and Dropbox with minification of assets.
