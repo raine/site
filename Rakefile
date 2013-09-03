@@ -71,5 +71,6 @@ def deploy_to_github
     sh "cp -R ../build/* ."
     sh "git add -A"
     sh "git commit -m 'deploying #{Time.now}'"
+    sh "git push"
   end
 end
