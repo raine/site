@@ -34,10 +34,6 @@ function onImageLoad() {
 
 		var effects = [
 			function() {
-				// var banned     = [ 'easeInOutElastic' ];
-				// var easings    = _.without(_.keys(Easing), banned);
-				// var easingName = pickRandom(_.keys(Easing));
-				// console.log(easingName);
 				opts = _.defaults(opts, {
 					blockSize  : 16,
 					duration   : pickRandom(1000, 2000, 3000),
@@ -88,7 +84,6 @@ function onImageLoad() {
 			function() {
 				return function(canvas, cb) {
 					var easingName = pickRandom('easeInBounce', 'easeOutBounce', 'easeInOutBack');
-					// console.log(easingName);
 					Px.animate(canvas, {
 						easing   : Easing[easingName],
 						duration : 2000,
@@ -167,7 +162,6 @@ function onImageLoad() {
 			};
 
 			if ($(canvas).is(':hidden') || pageHidden) {
-				console.log('canvas hidden no effect');
 				return again();
 			}
 
