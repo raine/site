@@ -199,15 +199,11 @@
     </div> <!-- container -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 <% if @config[:env] == "production" -%>
-    <script type="text/javascript" src="js/resume.min.js"></script>
+  <script type="text/javascript" src="js/resume.min.js"></script>
 <% else -%>
-    <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
-    <script type="text/javascript" src="js/jquery.fancybox-thumbs.js"></script>
-    <script type="text/javascript" src="js/underscore.js"></script>
-    <script type="text/javascript" src="js/easing.js"></script>
-    <script type="text/javascript" src="js/px.js"></script>
-    <script type="text/javascript" src="js/efu.js"></script>
-    <script type="text/javascript" src="js/fancybox.js"></script>
+  <% for file in @config[:javascript] -%>
+  <script type="text/javascript" src="js/<%= file %>.js"></script>
+  <% end -%>
 <% end -%>
 <% if @config[:env] == "production" -%>
     <script type="text/javascript">
