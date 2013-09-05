@@ -51,13 +51,15 @@ route '/css/*/' do
 end
 
 route '/js/resume.concat/' do
-  if @config[:env] == "production"
+  if production
     '/js/resume.min.' + item[:extension]
   end
 end
 
 route '/js/*/' do
-  item.identifier.chop + '.' + item[:extension]
+  unless production
+    item.identifier.chop + '.' + item[:extension]
+  end
 end
 
 route '*' do
@@ -69,5 +71,3 @@ route '*' do
     item.identifier + 'index.html'
   end
 end
-
-# layout '*', :erb

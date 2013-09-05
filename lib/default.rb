@@ -8,3 +8,7 @@ def all_js(files)
     item.compiled_content
   end.join("\n")
 end
+
+def production
+  @config[:env] === "production"
+end
