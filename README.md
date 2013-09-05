@@ -12,4 +12,4 @@ site
 
 ### Points of Interest
 
-* [Rakefile](https://github.com/raneksi/site/blob/master/Rakefile), deployment to GitHub and Dropbox with minification of assets.
+* [Rakefile](https://github.com/raneksi/site/blob/master/Rakefile), deployment to GitHub and Dropbox.
