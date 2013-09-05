@@ -21,6 +21,11 @@ compile '/css/styles.css/' do
   filter :sass, syntax: :scss
 end
 
+compile '/css/resume.concat/' do
+  filter :erb
+  filter :rainpress
+end
+
 compile '/css/*/' do
   # do nothing
 end
@@ -42,17 +47,20 @@ compile '*' do
   end
 end
 
-route '/css/styles.css/' do
-  '/css/styles.css'
+route '/*/resume.concat' do
+  if production
+    item.identifier[%r{/\w+/}] + 'resume.min.' + item[:extension]
+  end
 end
 
 route '/css/*/' do
-  item.identifier.chop + '.' + item[:extension]
-end
-
-route '/js/resume.concat/' do
-  if production
-    '/js/resume.min.' + item[:extension]
+  unless production
+    # Drop .scss if applicable
+    if item[:extension] === "scss"
+      item.identifier.chop
+    else
+      item.identifier.chop + '.' + item[:extension]
+    end
   end
 end
 

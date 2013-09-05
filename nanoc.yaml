@@ -88,3 +88,12 @@ javascript:
   - px
   - efu
   - fancybox
+
+stylesheets:
+  - fontello
+  - bootstrap
+  - styles.css
+  - jquery.fancybox
+  - jquery.fancybox-thumbs
+
+# env: 'production'
