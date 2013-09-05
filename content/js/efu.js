@@ -29,7 +29,7 @@ function onImageLoad() {
 		return _.first(_.shuffle(_.flatten(arguments)));
 	};
 
-	var makeRandomEffect = function(opts) {
+	var makeRandomEffect = function(opts, index) {
 		opts = opts || {};
 
 		var effects = [
@@ -118,11 +118,18 @@ function onImageLoad() {
 			},
 		];
 
+		var pick;
+		if (index === undefined) {
+			pick = pickRandom;
+		} else {
+			pick = function(arr) { return arr[index] };
+		}
+
 		var effect;
 		if (opts.reverse) {
-			effect = pickRandom(reverseEffects)();
+			effect = pick(reverseEffects)();
 		} else {
-			effect = pickRandom(effects)();
+			effect = pick(effects)();
 		}
 
 		return { opts: opts, fn: effect };
@@ -155,6 +162,7 @@ function onImageLoad() {
 		pageHidden = hidden;
 	});
 
+	var c = 0;
 	var effectLoop = function() {
 		(function doEffect() {
 			var again = function() {
@@ -165,7 +173,9 @@ function onImageLoad() {
 				return again();
 			}
 
-			var effect = makeRandomEffect();
+			var arg    = c++ === 0 ? 0 : void 0;
+			var effect = makeRandomEffect(null, arg);
+
 			var cb = function() {
 				setTimeout(function() {
 					var efu = makeRandomEffect({
