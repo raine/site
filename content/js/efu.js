@@ -146,7 +146,7 @@ function onImageLoad() {
 		ctx.putImageData(imgDcopy, 0, 0);
 	};
 
-	var START_DELAY   = 5000;
+	var START_DELAY   = 1000;
 	var REVERSE_DELAY = _.random(2500, 5000);
 	var NEXT_DELAY    = _.random(4000, 7000);
 	var pageHidden;
