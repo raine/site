@@ -7,11 +7,11 @@
 <% if production -%>
     <link href="css/resume.min.css" rel="stylesheet" media="screen">
 <% else -%>
-  <% for file in @config[:stylesheets] -%>
-  <link href="css/<%= file %>.css" rel="stylesheet" media="screen">
-  <% end -%>
+<% for file in @config[:stylesheets] -%>
+    <link href="css/<%= file %>.css" rel="stylesheet" media="screen">
 <% end -%>
-  <link href="http://fonts.googleapis.com/css?family=Open+Sans:600|Roboto+Condensed:300,400" rel="stylesheet" type="text/css">
+<% end -%>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:600|Roboto+Condensed:300,400" rel="stylesheet" type="text/css">
 <% unless production -%>
     <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 <% end -%>
