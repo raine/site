@@ -90,7 +90,7 @@ javascript:
   - fancybox
 
 stylesheets:
-  - fontello
+  - icomoon
   - bootstrap
   - styles.css
   - jquery.fancybox
