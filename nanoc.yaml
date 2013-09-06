@@ -92,7 +92,7 @@ javascript:
 stylesheets:
   - icomoon
   - bootstrap
-  - styles.css
+  - styles
   - jquery.fancybox
   - jquery.fancybox-thumbs
 

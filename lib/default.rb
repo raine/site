@@ -3,7 +3,7 @@
 
 def get_files(files, path)
   files.map do |file|
-    item = @items.find { |i| i.identifier == "/#{path}/#{file}/" }
+    item = @items.find { |i| i.identifier[%r{/#{path}/#{file}(?:\.css)?/}] }
     puts "File #{file} doesn't exist!" unless item
     item.compiled_content
   end.join("\n")
