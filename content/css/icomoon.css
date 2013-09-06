@@ -1,0 +1,71 @@
+@font-face {
+	font-family: 'icomoon';
+	/* src:url('../fonts/icomoon.eot'); */
+	/* src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'), */
+		/* url('../fonts/icomoon.woff') format('woff'), */
+		/* url('../fonts/icomoon.ttf') format('truetype'), */
+	src:url('../fonts/icomoon.svg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"] {
+*/
+.icon-mail, .icon-twitter, .icon-arrow-right, .icon-linkedin-sign, .icon-tools, .icon-code, .icon-code-fork, .icon-magic, .icon-mobile, .icon-mobile-2, .icon-phone, .icon-location, .icon-database, .icon-github {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1em;
+  margin-left: 0.2em;
+  width: 1em;
+	-webkit-font-smoothing: antialiased;
+}
+.icon-mail:before {
+	content: "\e000";
+}
+.icon-twitter:before {
+	content: "\e001";
+}
+.icon-arrow-right:before {
+	content: "\e002";
+}
+.icon-linkedin-sign:before {
+	content: "\f08c";
+}
+.icon-tools:before {
+	content: "\e003";
+}
+.icon-code:before {
+	content: "\e004";
+}
+.icon-code-fork:before {
+	content: "\f126";
+}
+.icon-magic:before {
+	content: "\f0d0";
+}
+.icon-mobile:before {
+	content: "\e005";
+}
+.icon-mobile-2:before {
+	content: "\e006";
+}
+.icon-phone:before {
+	content: "\e007";
+}
+.icon-location:before {
+	content: "\e008";
+}
+.icon-database:before {
+	content: "\e009";
+}
+.icon-github:before {
+	content: "\e00a";
+}
