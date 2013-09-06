@@ -6,7 +6,7 @@ site
 ### Tools and Libraries Used
 
 * [nanoc](http://nanoc.ws), a static site generator
-* [Fontello](http://fontello.com), an icon fonts generator
+* [IcoMoon](http://icomoon.io), an icon fonts generator
 * [Bootstrap](http://getbootstrap.com) for the layout
 * [Fancybox](http://fancyapps.com/fancybox/), a jQuery lightbox plugin
 
