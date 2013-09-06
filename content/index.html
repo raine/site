@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <title>Raine Virta</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-<% if @config[:env] == "production" -%>
+<% if production -%>
     <link href="css/resume.min.css" rel="stylesheet" media="screen">
 <% else -%>
   <% for file in @config[:stylesheets] -%>
@@ -12,7 +12,7 @@
   <% end -%>
 <% end -%>
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:600|Roboto+Condensed:300,400" rel="stylesheet" type="text/css">
-<% if @config[:env] != "production" -%>
+<% if production -%>
     <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 <% end -%>
   </head>
@@ -193,14 +193,14 @@
       </div>
     </div> <!-- container -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-<% if @config[:env] == "production" -%>
+<% if production -%>
   <script type="text/javascript" src="js/resume.min.js"></script>
 <% else -%>
   <% for file in @config[:javascript] -%>
   <script type="text/javascript" src="js/<%= file %>.js"></script>
   <% end -%>
 <% end -%>
-<% if @config[:env] == "production" -%>
+<% if production -%>
     <script type="text/javascript">
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-30721226-2']);
