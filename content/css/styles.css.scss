@@ -59,6 +59,8 @@ body {
 
   #header h1 {
     font-size: 36pt;
+    white-space: nowrap;
+    z-index: 1;
   }
 
   #avatar-wrap {
@@ -66,6 +68,7 @@ body {
     width: 64px;
     border: 0;
     float: right;
+    z-index: 10;
     box-shadow: none;
 
     canvas {
