@@ -5,7 +5,7 @@ task :build do
   require 'nanoc/cli'
 
   site = ::Nanoc::Site.new('.')
-  site.config[:output_dir] = 'build'
+  site.config[:output_dir] = BUILD_DIR
   site.config[:env] = 'production'
   site.compile
   ::Nanoc::Extra::Pruner.new(site, site.config[:prune]).run
@@ -45,7 +45,7 @@ def deploy_to_github
     sh "git reset --hard"
     sh "git clean -fd"
     sh "rm -r *"
-    sh "cp -R ../build/* ."
+    sh "cp -R ../#{BUILD_DIR}/* ."
     sh "git add -A"
     sh "git commit -m 'deploying #{Time.now}'" do |ok, res|; end
     sh "git push"
