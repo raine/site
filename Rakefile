@@ -23,7 +23,7 @@ task :deploy => [ :build ] do
 end
 
 task :init_github_pages do
-  sh "git clone --branch master --single-branch git@github.com:raneksi/raneksi.github.com.git raneksi.github.io"
+  sh "git clone --branch master --single-branch git@github.com:raine/raine.github.com.git raine.github.io"
 end
 
 task :deploy_to_dropbox do
@@ -41,7 +41,7 @@ def deploy_to_dropbox
 end
 
 def deploy_to_github
-  Dir.chdir "raneksi.github.io" do
+  Dir.chdir "raine.github.io" do
     sh "git reset --hard"
     sh "git clean -fd"
     sh "rm -r *"
