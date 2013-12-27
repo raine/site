@@ -1,7 +1,7 @@
 site
 ====
 
-[![](https://raw.github.com/raneksi/site/master/assets/screenshot.png)](http://raneksi.github.io)
+[![](https://raw.github.com/raine/site/master/assets/screenshot.png)](http://raine.github.io)
 
 ### Tools and Libraries Used
 
@@ -12,4 +12,4 @@ site
 
 ### Points of Interest
 
-* [Rakefile](https://github.com/raneksi/site/blob/master/Rakefile), deployment to GitHub and Dropbox.
+* [Rakefile](https://github.com/raine/site/blob/master/Rakefile), deployment to GitHub and Dropbox.
