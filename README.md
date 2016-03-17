@@ -15,10 +15,12 @@ site
 * [Rakefile](https://github.com/raine/site/blob/master/Rakefile), deployment to GitHub and Dropbox.
 
 
-### Setup
+### Quick Start
 
 ```sh
 $ gem install nanoc -v 3.8
 $ gem install uglifier rainpress
 $ rake init_github_pages
+$ rake build
+$ rake deploy
 ```
