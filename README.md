@@ -13,3 +13,12 @@ site
 ### Points of Interest
 
 * [Rakefile](https://github.com/raine/site/blob/master/Rakefile), deployment to GitHub and Dropbox.
+
+
+### Setup
+
+```sh
+$ gem install nanoc -v 3.8
+$ gem install uglifier rainpress
+$ rake init_github_pages
+```
