@@ -71,19 +71,27 @@
             Sulake Corporation Oy
             <span class="job-title">Software Developer</span>
           </h3>
-          <span class="time-period">November 2014 – Present</span>
+          <span class="time-period">November 2013 – August 2016</span>
+
+          <img class="right" src="images/giffer.gif" />
+
+          <p>
+            Full stack web development with all things Habbo.
+          </p>
 
           <p>
             Initially part of the Habbo Stories team developing a platform
-            for creating and sharing user-generated content. Helped in
+            for creating and sharing user-generated content. Later helped in
             building the new Habbo web with modern tools.
           </p>
 
           <p>
-            Fun things created on free time:
-            <a href="https://www.habbo.com/giffer/#/">Habbo Giffer</a>,
-            <a href="http://raine.github.io/explorer">Selfie Explorer</a>,
-            <a href="https://www.habbo.com/mosaic/">Habbo Mosaic</a>
+            Some cool things created on free time:
+            <ul>
+              <li><a href="https://www.habbo.com/giffer/#/">Habbo Giffer</a></li>
+              <li><a href="http://raine.github.io/explorer">Selfie Explorer</a></li>
+              <li><a href="https://www.habbo.com/mosaic/">Habbo Mosaic</a></li>
+            </ul>
           </p>
           <h3>
             Blaast
@@ -125,6 +133,7 @@
                 <li class="l1">LiveScript</li>
                 <li class="l1">CoffeeScript</li>
                 <li class="l1">Ruby</li>
+                <li class="l2">Lua</li>
                 <li class="l2">Python</li>
                 <li class="l3">Haskell</li>
                 <li class="l3">Clojure</li>
@@ -133,7 +142,8 @@
               </ul>
 
               <p class="natural">
-                Native in Finnish. Fluent in spoken and written English. Picking up Swedish in spare time.
+                Native in Finnish. Fluent in spoken and written English.
+                Picking up some Swedish in spare time.
               <p>
             </dd>
 
@@ -152,7 +162,7 @@
                 App Deployment and Optimization, Web Analytics (GA,
                 Mixpanel), TDD, BDD, Acceptance Testing, API Development, A/B
                 Testing, Chrome Extensions, Browser Userscripts, Linux
-                Administration (Debian, Ubuntu), nginx, Apache, Grafana
+                (Debian, Ubuntu), nginx, Apache, Grafana
               </p>
             </dd>
 
@@ -166,7 +176,7 @@
               Tools
               <i class="icon-tools"></i>
             </dt>
-            <dd>Mac OS X, Git, vim, tmux, Photoshop, Illustrator</dd>
+            <dd>Mac OS X, Git, vim, Photoshop</dd>
           </dl>
         </div> <!-- skills -->
       </div> <!-- row -->
@@ -179,7 +189,7 @@
           <span class="time-period">2010 – 2011</span>
 
           <h2>Hobbies</h2>
-          <p>I like to read, lift weights and lately also to <a href="https://www.strava.com/athletes/2324638">ride</a> <a href="http://imgur.com/a/oKFlD">a bike</a>.</p>
+          <p>I like to read, lift weights and to <a href="https://www.strava.com/athletes/2324638">ride a bike</a>.</p>
         </div> <!-- education -->
         <div id="projects" class="span6">
           <h2>Projects & Open Source</h2>
@@ -241,6 +251,7 @@
             <p>A Ruby library for the Reittiopas GET API.</p>
           </div>
           <ul class="minor">
+            <li><a href="https://github.com/raine/vmsq">vmsq</a></li>
             <li><a href="https://github.com/raine/ez-jenkins">ez-jenkins</a></li>
             <li><a href="https://github.com/raine/treis">treis</a></li>
             <li><a href="https://github.com/raine/taim">taim</a></li>
@@ -266,7 +277,7 @@
     </div> <!-- container -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 <% if production -%>
-  <script type="text/javascript" src="js/resume.min.js"></script>
+    <script type="text/javascript" src="js/resume.min.js"></script>
 <% else -%>
   <% for file in @config[:javascript] -%>
   <script type="text/javascript" src="js/<%= file %>.js"></script>
