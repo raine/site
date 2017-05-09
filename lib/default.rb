@@ -3,7 +3,7 @@
 
 def get_files(files, path)
   files.map do |file|
-    item = @items.find { |i| i.identifier[%r{/#{path}/#{file}(?:\.css)?/}] }
+    item = @items.find { |i| i.identifier.to_s[%r{/#{path}/#{file}(?:\.css)?/}] }
     puts "File #{file} doesn't exist!" unless item
     item.compiled_content
   end.join("\n")
@@ -18,5 +18,5 @@ def all_css(files)
 end
 
 def production
-  @config[:env] === "production"
+  ENV['NANOC_ENV'] === "production"
 end

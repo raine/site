@@ -1,4 +1,4 @@
-BUILD_DIR = 'build'
+BUILD_DIR = 'output'
 
 task :build do
   require 'nanoc'
@@ -37,7 +37,7 @@ end
 task :default => 'build'
 
 def deploy_to_dropbox
-  sh "./assets/deploy.sh resume"
+  sh "./assets/deploy.sh #{BUILD_DIR} resume"
 end
 
 def deploy_to_github

@@ -1,12 +1,13 @@
 #!/bin/bash
 
-ARG=$1
+SRC=$1
+DST=$2
 set -x verbose #echo on
 
-if [ -z "$ARG" ]; then
+if [ -z "$DST" ]; then
   TARGET=$(basename $(pwd))
 else
-  TARGET=$ARG
+  TARGET=$DST
 fi
 
 rsync \
@@ -14,7 +15,7 @@ rsync \
   --exclude $(basename $0) \
   --exclude '.git*' \
   --exclude 'node_modules/' \
-  -va build/ ~/Dropbox/Public/$TARGET
+  -va $SRC/ ~/Dropbox/Public/$TARGET
 
 FILE_TO_LINK="index.html"
 DROPBOX_ID=1103994
